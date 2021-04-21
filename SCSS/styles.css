@@ -1,13 +1,108 @@
 body {
   padding: 0;
   margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
 }
 
 body #main {
-  background-color: black;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: white;
-  height: 100vh;
-  width: 100vw;
+  padding: 5px;
+}
+
+body #main #images {
+  border: 1px solid white;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+}
+
+body #main #form {
+  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+body #main #form #skip_add {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+body #main #form #skip_add form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body #main #form #skip_add form button {
+  width: 50%;
+  padding: 5px;
+  margin: 0;
+}
+
+body #main #form #email_submit {
+  width: 100%;
+}
+
+body #main #form #email_submit form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+body #main #form #email_submit form #email {
+  width: 75%;
+  padding: 5px;
+}
+
+body #main #form #email_submit form #email_btn {
+  width: 25%;
+  padding: 5px;
+}
+
+body #main #selected_images {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+body #main #selected_images #image_description {
+  border: 1px solid gray;
+  margin-bottom: 5px;
+}
+
+body #main #selected_images #image_description h1,
+body #main #selected_images #image_description p {
+  margin: 5px;
+}
+
+body #main #selected_images #selected_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid gray;
 }
 /*# sourceMappingURL=styles.css.map */

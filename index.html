@@ -6,24 +6,36 @@
     </head>
     <body>
         <div id="main">
-            <div id="images"></div>
-            <div id="submission_form">
-                <div id="form">
-
-                    <form action="/action_page.php">
-                        <label for="fname">First name:</label><br>
-                        <input type="text" id="fname" name="fname" value="John"><br>
-                        <label for="lname">Last name:</label><br>
-                        <input type="text" id="lname" name="lname" value="Doe"><br><br><br>
-                        <label for="email">Email:</label><br>
-                        <input type="text" id="fname" name="fname" value="Email"><br>
-                        <input type="submit" value="Submit">
-                        
-                      </form>
-
+            <div id="image_api">
+                <div id="images">
+                    <img id="refresh" src="https://picsum.photos/300" alt='image generator'>
                 </div>
-                <div id="selected_images"></div>
+                <div id="form">
+                    <div id="skip_add">
+                    <form action="#">
+                        <button id="skip_btn" type="submit">skip</button>
+                        <button type="submit">add</button>
+                    </form>
+                    </div>
+                    <div id="email_submit">
+                        <form action="#">
+                            <input type="text" id="email" name="email" value="Email"><br>
+                            <input type="submit" value="Save" id="email_btn">
+                        </form>
+                    </div>
+    
+                </div>
+                
+            </div>
+            <div id="selected_images">
+                <div id="image_description">
+                    <h1>Select images with 'add', or skip image with 'skip'</h1>
+                    <p>Once selected images, enter valid email and click save.</p>
+                </div>
+                <div id="selected_container"></div>
             </div>
         </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

@@ -2,12 +2,91 @@ body {
 
     padding: 0;
     margin: 0;
-
-    #main {
-    background-color: black;
-    text-align: center;
-    color: white;
     height: 100vh;
     width: 100vw;
+    background-color: black;
+
+    #main {
+
+    display: flex;
+    color: white;
+    padding: 5px;
+
+        #images {
+            border: 1px solid white;
+            height: 300px;
+            width: 300px;
+            margin: auto;
+        }
+
+        #form {
+            border: 1px solid white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+
+            #skip_add {
+                width: 100%;
+                margin-bottom: 10px;
+                
+
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+
+                    button {
+                        width: 50%;
+                        padding: 5px;
+                        margin: 0;
+                    }
+
+                }
+            }
+
+            #email_submit {
+                width: 100%;
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+
+                    #email {
+                        width: 75%;
+                        padding: 5px;
+                    }
+
+                    #email_btn {
+                        width: 25%;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+
+        #selected_images {
+            border: 1px solid white;
+            padding: 5px;
+
+            #image_description {
+
+                h1,
+                p {
+                    margin: 5px;
+                }
+
+                border: 1px solid gray;
+                margin-bottom: 5px;
+            }
+
+            #selected_container {
+                display: flex;
+                border: 1px solid gray;
+ 
+            }
+        }
     }
 }

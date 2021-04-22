@@ -1,12 +1,26 @@
-//event listener(s)
+//GET URL
+let imageUrl = 'https://picsum.photos/300';
 
-document.getElementById('email_submit').addEventListener('click');
+//assign url to image element on desktop
+
+
+
+
+// document.getElementById('email_submit').addEventListener('click');
 
 // random image api
+let skip = false;
+//SKIP
+document.getElementById('skip_btn').addEventListener('click', function() {
+    skip = !skip;
 
-// refresh image src
-const refreshImage = document.getElementById("refresh");
-document.getElementById('skip_btn').addEventListener('click')
+    if(skip) { document.getElementById("refresh").src= imageUrl;
+        console.log('click'); }
+});
 
 
+//ADD 
+document.getElementById('add_btn').addEventListener('click', function() {
+
+})
 

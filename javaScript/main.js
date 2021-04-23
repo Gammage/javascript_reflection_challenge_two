@@ -1,3 +1,6 @@
+const skipButton = document.getElementById("skip_btn");
+const addButton = document.getElementById("")
+
 //Get img with axios
 
 const getimage = () => {
@@ -12,8 +15,14 @@ const getimage = () => {
     .catch(function (error) {
         console.log(error)
     });
-
 };
-//assign url to image element on desktop
+
+window.addEventListener("load", getimage);
+skipButton.addEventListener("click", getimage);
+
+
+// create array
+
+const selectedImages
 
 

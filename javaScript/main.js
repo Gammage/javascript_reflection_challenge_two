@@ -1,38 +1,19 @@
 //Get img with axios
 
-const getImage = () => {
+const getimage = () => {
+
     axios.get("https://picsum.photos/300")
     .then(response => {
-        pickImage(response.data);
-        console.log('test');
+        pictureId = response.headers['picsum-id'];
+        console.log(response);
+        ImageUrl = `https://picsum.photos/id/${pictureId}/300`;
+        document.getElementById("image_src").src = ImageUrl;
     })
-    .catch(err => errorHandler(err))
+    .catch(function (error) {
+        console.log(error)
+    });
+
 };
+//assign url to image element on desktop
 
-
-
-// let imageUrl = 'https://picsum.photos/300';
-
-// //assign url to image element on desktop
-
-
-
-
-// // document.getElementById('email_submit').addEventListener('click');
-
-// // random image api
-// let skip = false;
-// //SKIP
-// document.getElementById('skip_btn').addEventListener('click', function() {
-//     skip = !skip;
-
-//     if(skip) { document.getElementById("refresh").src= imageUrl;
-//         console.log('click'); }
-// });
-
-
-// //ADD 
-// document.getElementById('add_btn').addEventListener('click', function() {
-
-// })
 

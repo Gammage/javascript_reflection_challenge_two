@@ -27,42 +27,26 @@ body {
             text-align: center;
 
             #skip_add {
+                display: flex;
+                flex-direction: row;
                 width: 100%;
-                margin-bottom: 10px;
-                
+                height: 50%;
 
-                form {
-                    display: flex;
-                    flex-direction: row;
-                    width: 100%;
-                    padding: 0;
-                    margin: 0;
-
-                    button {
-                        width: 50%;
-                        padding: 5px;
-                        margin: 0;
-                    }
-
+                #skip_btn,
+                #add_btn {
+                    width: 50%;
+                    padding: 5px;
                 }
             }
 
             #email_submit {
                 width: 100%;
-                form {
-                    display: flex;
-                    flex-direction: row;
-                    width: 100%;
-
-                    #email {
-                        width: 75%;
-                        padding: 5px;
-                    }
-
-                    #email_btn {
-                        width: 25%;
-                        padding: 5px;
-                    }
+                height: 50%;
+                
+                #email_text {
+                    // display: inline-block;
+                    width: calc(100% - 4px);
+                    padding: 5px 0px;
                 }
             }
         }

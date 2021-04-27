@@ -36,11 +36,6 @@ body #main #form {
 }
 
 body #main #form #skip_add {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-body #main #form #skip_add form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,39 +44,23 @@ body #main #form #skip_add form {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  height: 50%;
 }
 
-body #main #form #skip_add form button {
+body #main #form #skip_add #skip_btn,
+body #main #form #skip_add #add_btn {
   width: 50%;
   padding: 5px;
-  margin: 0;
 }
 
 body #main #form #email_submit {
   width: 100%;
+  height: 50%;
 }
 
-body #main #form #email_submit form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-}
-
-body #main #form #email_submit form #email {
-  width: 75%;
-  padding: 5px;
-}
-
-body #main #form #email_submit form #email_btn {
-  width: 25%;
-  padding: 5px;
+body #main #form #email_submit #email_text {
+  width: calc(100% - 4px);
+  padding: 5px 0px;
 }
 
 body #main #selected_images {

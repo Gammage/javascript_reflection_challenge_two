@@ -67,21 +67,4 @@ body #main #selected_images {
   border: 1px solid white;
   padding: 5px;
 }
-
-body #main #selected_images #image_description {
-  border: 1px solid gray;
-  margin-bottom: 5px;
-}
-
-body #main #selected_images #image_description h1,
-body #main #selected_images #image_description p {
-  margin: 5px;
-}
-
-body #main #selected_images #selected_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid gray;
-}
 /*# sourceMappingURL=styles.css.map */

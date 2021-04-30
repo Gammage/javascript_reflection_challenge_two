@@ -70,7 +70,7 @@ function createBoxforImg () {
     let imgContainer = document.createElement('div')
     imgContainer.classList.add('image_container')
     imgContainer.id = passedEmail + '_img_box'
-    userContainer.appendChild(image_container)
+    userContainer.appendChild(imgContainer)
 
     // img
     let image = document.createElement('img')
@@ -79,7 +79,14 @@ function createBoxforImg () {
 
 };
 
-// function addImgetoBox () {};
+function addImgetoBox () {
+    //create image to email thats already been created
+
+    let image = document.createElement('img')
+    image.src = `https://picsum.photos/id/${pictureId}/150`;
+    imgContainer.appendChild(image);
+
+};
 
 //this makes no sense, but i know this is used to test if an email has been saved already
 function arrayContains(value) {

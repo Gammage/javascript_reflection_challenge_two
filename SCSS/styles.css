@@ -7,21 +7,23 @@ body {
 }
 
 body #main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   color: white;
   padding: 5px;
 }
 
-body #main #images {
+body #main #image_api {
+  width: 300px;
+  margin: auto;
+}
+
+body #main #image_api #images {
   border: 1px solid white;
   height: 300px;
   width: 300px;
   margin: auto;
 }
 
-body #main #form {
+body #main #image_api #form {
   border: 1px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,9 +35,10 @@ body #main #form {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
+  width: 300px;
 }
 
-body #main #form #skip_add {
+body #main #image_api #form #skip_add {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,18 +50,18 @@ body #main #form #skip_add {
   height: 50%;
 }
 
-body #main #form #skip_add #skip_btn,
-body #main #form #skip_add #add_btn {
+body #main #image_api #form #skip_add #skip_btn,
+body #main #image_api #form #skip_add #add_btn {
   width: 50%;
   padding: 5px;
 }
 
-body #main #form #email_submit {
+body #main #image_api #form #email_submit {
   width: 100%;
   height: 50%;
 }
 
-body #main #form #email_submit #email_text {
+body #main #image_api #form #email_submit #email_text {
   width: calc(100% - 4px);
   padding: 5px 0px;
 }

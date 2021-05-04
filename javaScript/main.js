@@ -1,5 +1,4 @@
 const userContainer = document.getElementById('selected_images');
-
 const skipButton = document.getElementById("skip_btn");
 const addButton = document.getElementById("add_btn");
 let emailText = document.getElementById('email_text');
@@ -28,15 +27,15 @@ function validateEmail(emailInput){
     if (emailInput.match(mailFormat)) {
         
         passedEmail = emailInput
-        // .replace(/@/g, '')
         console.log(passedEmail);
-        uncutemail = emailInput; //why
 
         if(arrayContains(passedEmail)) {
-        addimgtobox(emailInput, pictureId)
+        addImgtoBox(passedEmail, imageUrl)
         } else {
             createBoxforImg()
         }
+
+        getimage()
 
         } else {
             // emailInputError.textContent = emailerrorstring
@@ -44,11 +43,9 @@ function validateEmail(emailInput){
         }
 };
 
-
 addButton.addEventListener('click', function() {
     validateEmail(emailText.value);
 });
-
 
 window.addEventListener("load", getimage);
 skipButton.addEventListener("click", getimage);
@@ -69,21 +66,25 @@ function createBoxforImg () {
     // image container
     let imgContainer = document.createElement('div')
     imgContainer.classList.add('image_container')
-    imgContainer.id = passedEmail + '_img_box'
+    imgContainer.id = passedEmail + '_image_box'
     userContainer.appendChild(imgContainer)
 
     // img
     let image = document.createElement('img')
+    image.classList.add('saved_mini')
     image.src = `https://picsum.photos/id/${pictureId}/150`;
     imgContainer.appendChild(image);
+    usedEmails.push(passedEmail)
 
 };
 
-function addImgetoBox () {
+function addImgtoBox () {
     //create image to email thats already been created
 
     let image = document.createElement('img')
+    image.classList.add('saved_mini')
     image.src = `https://picsum.photos/id/${pictureId}/150`;
+    let imgContainer = document.getElementById(passedEmail + '_image_box')
     imgContainer.appendChild(image);
 
 };

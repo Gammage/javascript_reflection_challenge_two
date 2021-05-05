@@ -2,14 +2,11 @@ const userContainer = document.getElementById('selected_images');
 const skipButton = document.getElementById("skip_btn");
 const addButton = document.getElementById("add_btn");
 let emailText = document.getElementById('email_text');
-//Get img with axios
 
 let usedEmails = [];
-let correctEmail
 let imageUrl
 let pictureId
 let passedEmail
-let uncutemail
     
 const getimage = () => axios.get("https://picsum.photos/300")
 .then((response) => {
@@ -40,6 +37,7 @@ function validateEmail(emailInput){
         } else {
             // emailInputError.textContent = emailerrorstring
             console.log("error");
+            window.alert("Please input a valid email");
         }
 };
 
@@ -66,7 +64,7 @@ function createBoxforImg () {
     // image container
     let imgContainer = document.createElement('div')
     imgContainer.classList.add('image_container')
-    imgContainer.id = passedEmail + '_image_box'
+    imgContainer.id = passedEmail + '_imgbox'
     userContainer.appendChild(imgContainer)
 
     // img
@@ -84,12 +82,12 @@ function addImgtoBox () {
     let image = document.createElement('img')
     image.classList.add('saved_mini')
     image.src = `https://picsum.photos/id/${pictureId}/150`;
-    let imgContainer = document.getElementById(passedEmail + '_image_box')
+    let imgContainer = document.getElementById(passedEmail + '_imgbox')
     imgContainer.appendChild(image);
 
 };
 
-//this makes no sense, but i know this is used to test if an email has been saved already
+//if email is used
 function arrayContains(value) {
     for (let x = 0; x < usedEmails.length; x++) {
         if (usedEmails[x] === value) {

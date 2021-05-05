@@ -9,6 +9,11 @@ body {
     #main {
 
     // display: flex;
+    h1 {
+        font-size: 12px;
+        color: lightgray;
+    }
+
     color: white;
     padding: 5px;
         #image_api {
@@ -57,7 +62,7 @@ body {
         }
 
         #selected_images {
-            border: 1px solid white;
+            // border: 1px solid white;
             padding: 5px;
 
             

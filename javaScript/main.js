@@ -7,17 +7,20 @@ let usedEmails = [];
 let imageUrl
 let pictureId
 let passedEmail
-    
-const getimage = () => axios.get("https://picsum.photos/300")
-.then((response) => {
+
+
+function getimage () { axios.get("https://picsum.photos/300")
+.then(function (response) {
     pictureId = response.headers['picsum-id'];
     console.log(response);
-    imageUrl = `https://picsum.photos/id/${pictureId}/300`;
+    imageUrl = 'https://picsum.photos/id/' + pictureId + '/300';
     document.getElementById("image_src").src = imageUrl;
 })
 .catch(function (error) {
     console.log(error)
+    alert("refresh page");
 });
+};
 
 function validateEmail(emailInput){
     const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -70,7 +73,7 @@ function createBoxforImg () {
     // img
     let image = document.createElement('img')
     image.classList.add('saved_mini')
-    image.src = `https://picsum.photos/id/${pictureId}/150`;
+    image.src = 'https://picsum.photos/id/' + pictureId + '/150';
     imgContainer.appendChild(image);
     usedEmails.push(passedEmail)
 
@@ -81,7 +84,7 @@ function addImgtoBox () {
 
     let image = document.createElement('img')
     image.classList.add('saved_mini')
-    image.src = `https://picsum.photos/id/${pictureId}/150`;
+    image.src = 'https://picsum.photos/id/' + pictureId + '/150';;
     let imgContainer = document.getElementById(passedEmail + '_imgbox')
     imgContainer.appendChild(image);
 
